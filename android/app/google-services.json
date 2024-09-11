@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "48096333463",
+    "project_id": "personalhome-f172b",
+    "storage_bucket": "personalhome-f172b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48096333463:android:91970da5c32ffaabd2a3d2",
+        "android_client_info": {
+          "package_name": "com.example.personal_home"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBObm3z6PQId4fHhcEWxlVKGO1XhLtCcvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48096333463:android:46e2eb40603afd5ad2a3d2",
+        "android_client_info": {
+          "package_name": "com.example.personal_home_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBObm3z6PQId4fHhcEWxlVKGO1XhLtCcvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
