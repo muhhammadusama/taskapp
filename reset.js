@@ -9,7 +9,7 @@ admin.initializeApp({
 const firestore = admin.firestore();
 
 async function resetTasks() {
-  const tasksRef = firestore.collection('surahcollection');
+  const tasksRef = firestore.collection('task');
   try {
     const snapshot = await tasksRef.get();
     snapshot.forEach(doc => {
