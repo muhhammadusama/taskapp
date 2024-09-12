@@ -1,0 +1,39 @@
+name: Firebase Reset Task
+
+# Schedule this workflow to run daily at midnight (UTC)
+on:
+  schedule:
+    - cron: "48 11 * * *"  # Runs every day at midnight
+
+jobs:
+  reset_firestore_task:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the latest code from your repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Set up Node.js environment (if you're using Node.js)
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # You can change this based on your project needs
+
+    # Step 3: Install Firebase Tools (CLI)
+    - name: Install Firebase CLI
+      run: npm install -g firebase-tools
+
+    # Step 4: Authenticate Firebase CLI using service account credentials
+    - name: Authenticate Firebase
+      run: firebase auth:login:ci --token "$(echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' | base64 --decode | jq -r .token)"
+
+    # Step 5: Run your Firebase reset logic using Firebase Admin SDK or Firebase CLI commands
+    - name: Reset Firestore Daily Task
+      run: reset.js
+        firebase functions:shell # Example: run Firebase functions or commands to reset data
+        # You can also run specific scripts, e.g., node resetTask.js
+
+    # Optional: Notify that the task ran successfully
+    - name: Success Notification
+      run: echo "Firebase reset task ran successfully!"
