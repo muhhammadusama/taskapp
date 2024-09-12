@@ -1,1 +1,2 @@
-worker: node reset.jsgit add .
+worker: node reset.js
+git add .

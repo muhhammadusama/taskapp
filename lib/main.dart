@@ -5,7 +5,7 @@ import 'package:personal_home_app/firebase_options.dart';
 import 'package:personal_home_app/screens/home/home.dart';
 //import 'package:personal_home_app/screens/home/home_page.dart';
 import 'package:personal_home_app/services/auth.dart';
-import 'package:personal_home_app/services/database.dart';
+//import 'package:personal_home_app/services/database.dart';
 import 'package:provider/provider.dart';
 import 'package:workmanager/workmanager.dart';
 
@@ -55,7 +55,7 @@ void callbackDispatcher() {
 
       // Now call the reset function
       print("Calling resetDailyTask");
-      await DatabaseService().resetDailyTask();
+      //await DatabaseService().resetDailyTask();
       print("Task reset successfully");
     } catch (e) {
       print("Error occurred during Firebase or Firestore operation: $e");
