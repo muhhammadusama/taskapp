@@ -4,7 +4,7 @@ name: Firebase Reset Task
 on:
   schedule:
     - cron: "10 12 * * *"  # Runs every day at midnight
-
+  workflow_dispatch:
 jobs:
   reset_firestore_task:
     runs-on: ubuntu-latest
