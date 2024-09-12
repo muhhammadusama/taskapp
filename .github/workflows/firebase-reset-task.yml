@@ -3,7 +3,7 @@ name: Firebase Reset Task
 # Schedule this workflow to run daily at midnight (UTC)
 on:
   schedule:
-    - cron: "50 23 * * *"  # Runs every day at midnight
+    - cron: "1 1 * * *"  # Runs every day at midnight
 
 jobs:
   reset_firestore_task:
